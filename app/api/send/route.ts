@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
       from: 'Portfolio Contact Form <onboarding@resend.dev>',
       to: [toEmail],
       subject: `New Message from ${name}`,
-      reply_to: email,
+      replyTo: email,
       html: `<p>You have received a new message from your portfolio contact form.</p>
              <p><strong>Name:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>
