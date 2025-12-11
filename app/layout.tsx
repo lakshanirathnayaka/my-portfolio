@@ -4,6 +4,11 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 //export const metadata: Metadata = {
   //title: "Lakshani Parami - Portfolio",
@@ -15,6 +20,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  config.autoAddCss = false;
   return (
     <html lang="en">
       <head>
@@ -25,7 +31,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBn5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
       </head>
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} antialiased flex flex-col min-h-screen`}
@@ -33,22 +38,22 @@ export default function RootLayout({
         <header className="relative z-50">
           <Header />
         </header>
-        <main className="grow p-4">{children}</main>
+        <main className="bg-black grow p-4">{children}</main>
         <BackToTopButton />
-        <footer className="p-4 bg-gray-800 text-white mt-8">
+        <footer className="p-4 bg-black text-white mt-8">
           <div className="container mx-auto flex justify-between items-center">
             <div className="text-left">
               <p>&copy; {new Date().getFullYear()} LakshaniParami. All rights reserved.</p>
             </div>
-            <div className="text-right flex space-x-4">
-              <a href="https://github.com/lakshanirathnayaka" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 text-2xl">
-                <i className="fab fa-github"></i>
+            <div className="text-right flex space-x-4 text-white">
+              <a href="https://github.com/lakshanirathnayaka" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 text-2xl">
+                <FontAwesomeIcon icon={faGithub} className="w-6 h-6" />
               </a>
-              <a href="https://linkedin.com/in/lakshani-parami-rathnayaka" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 text-2xl">
-                <i className="fab fa-linkedin"></i>
+              <a href="https://linkedin.com/in/lakshani-parami-rathnayaka" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 text-2xl">
+                <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6" />
               </a>
-              <a href="mailto:lakshanirathnayaka124@gmail.com" className="hover:text-blue-400 text-2xl">
-                <i className="fas fa-envelope"></i>
+              <a href="mailto:lakshanirathnayaka124@gmail.com" className="text-white hover:text-blue-400 text-2xl">
+                <FontAwesomeIcon icon={faEnvelope} className="w-6 h-6" />
               </a>
             </div>
           </div>

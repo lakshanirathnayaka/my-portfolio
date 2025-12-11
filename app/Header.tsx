@@ -8,9 +8,9 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="bg-purple-400 text-white p-4">
+    <header className="bg-black -text-white p-4">
       <nav className="container mx-auto flex justify-between items-center relative">
-        <Link href="/" className="text-lg font-bold">
+        <Link href="#home" className="text-lg font-bold text-white">
           My Portfolio
         </Link>
         <div className="md:hidden">
@@ -32,62 +32,32 @@ const Header = () => {
           </button>
         </div>
         {/* Desktop Menu */}
-        <div className="hidden md:flex md:space-x-4">
-          <Link href="/" className={pathname === '/'
-            ? 'bg-white text-purple-400 rounded-full py-2 px-4'
-            : 'text-white hover:text-purple-400 hover:bg-white rounded-full py-2 px-4'
-          }>
+        <div className="bg-black hidden md:flex md:space-x-4">
+          <Link href="#home" className="text-white rounded-full py-2 px-4 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400/50">
             Home
           </Link>
-          <Link href="/about" className={pathname === '/about'
-            ? 'bg-white text-purple-400 rounded-full py-2 px-4'
-            : 'text-white hover:text-purple-400 hover:bg-white rounded-full py-2 px-4'
-          }>
+          <Link href="#about" className="text-white rounded-full py-2 px-4 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400/50">
             About
           </Link>
-          <Link href="/skills" className={pathname === '/skills'
-            ? 'bg-white text-purple-400 rounded-full py-2 px-4'
-            : 'text-white hover:text-purple-400 hover:bg-white rounded-full py-2 px-4'
-          }>
+          <Link href="#skills" className="text-white rounded-full py-2 px-4 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400/50">
             Skills
           </Link>
-          <Link href="/projects" className={pathname === '/projects'
-            ? 'bg-white text-purple-400 rounded-full py-2 px-4'
-            : 'text-white hover:text-purple-400 hover:bg-white rounded-full py-2 px-4'
-          }>
+          <Link href="#projects" className="text-white rounded-full py-2 px-4 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400/50">
             Projects
           </Link>
-          <Link href="/contact" className={pathname === '/contact'
-            ? 'bg-white text-purple-400 rounded-full py-2 px-4'
-            : 'text-white hover:text-purple-400 hover:bg-white rounded-full py-2 px-4'
-          }>
+          <Link href="#contact" className="text-white rounded-full py-2 px-4 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400/50">
             Contact
           </Link>
         </div>
 
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-purple-400 md:hidden flex flex-col items-center space-y-4 p-4 shadow-lg">
-            <Link href="/" className={pathname === '/'
-              ? 'bg-white text-purple-400 rounded-full py-2 px-4 w-full text-center'
-              : 'hover:bg-white hover:text-purple-400 rounded-full py-2 px-4 w-full text-center'
-            }>Home</Link>
-            <Link href="/about" className={pathname === '/about'
-              ? 'bg-white text-purple-400 rounded-full py-2 px-4 w-full text-center'
-              : 'hover:bg-white hover:text-purple-400 rounded-full py-2 px-4 w-full text-center'
-            }>About</Link>
-            <Link href="/skills" className={pathname === '/skills'
-              ? 'bg-white text-purple-400 rounded-full py-2 px-4 w-full text-center'
-              : 'hover:bg-white hover:text-purple-400 rounded-full py-2 px-4 w-full text-center'
-            }>Skills</Link>
-            <Link href="/projects" className={pathname === '/projects'
-              ? 'bg-white text-purple-400 rounded-full py-2 px-4 w-full text-center'
-              : 'hover:bg-white hover:text-purple-400 rounded-full py-2 px-4 w-full text-center'
-            }>Projects</Link>
-            <Link href="/contact" className={pathname === '/contact'
-              ? 'bg-white text-purple-400 rounded-full py-2 px-4 w-full text-center'
-              : 'hover:bg-white hover:text-purple-400 rounded-full py-2 px-4 w-full text-center'
-            }>Contact</Link>
+          <div className="absolute top-full left-0 w-full bg-purple-400 md:hidden flex flex-col items-center space-y-4 p-4 shadow-lg" onClick={() => setIsMenuOpen(false)} style={{ color: 'white' }}>
+            <Link href="#home" className="hover:shadow-lg hover:shadow-purple-400/50 rounded-full py-2 px-4 w-full text-center">Home</Link>
+            <Link href="#about" className="hover:shadow-lg hover:shadow-purple-400/50 rounded-full py-2 px-4 w-full text-center">About</Link>
+            <Link href="#skills" className="hover:shadow-lg hover:shadow-purple-400/50 rounded-full py-2 px-4 w-full text-center">Skills</Link>
+            <Link href="#projects" className="hover:shadow-lg hover:shadow-purple-400/50 rounded-full py-2 px-4 w-full text-center">Projects</Link>
+            <Link href="#contact" className="hover:shadow-lg hover:shadow-purple-400/50 rounded-full py-2 px-4 w-full text-center">Contact</Link>
           </div>
         )}
       </nav>
