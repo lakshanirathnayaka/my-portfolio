@@ -12,14 +12,14 @@ const projects = [
     technologies: ["React", "Node.js", "MongoDB","Vercel"],
     frontendLink: "https://github.com/lakshanirathnayaka/FindMyDocs_Frontend",
     backendLink: "https://github.com/lakshanirathnayaka/FindMyDocs_Backend",
-    demoLink: "https://findmydocs.vercel.app/" // Example demo link
+    demoLink: "https://find-my-docs-frontend.vercel.app/" // Example demo link
   },
   {
     title: "Exam Registration System",
     description: "Description for project two.", // Add a description
     imageUrl: "/image/ERS.png", // Replace with a real image path
     technologies: ["PHP", "MySQL"],
-    frontendLink: "https://github.com/lakshanirathnayaka/Exam-Registration-System",
+    frontendLink: "https://github.com/lakshanirathnayaka/ERS-Web_Technologies",
     // backendLink and demoLink are optional, so they can be omitted if not available
   },
   {
