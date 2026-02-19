@@ -3,6 +3,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact, faNodeJs, faJava, faPhp } from "@fortawesome/free-brands-svg-icons";
 import { faLeaf, faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { SiPostgresql, SiRender } from "react-icons/si";
 
 const projects = [
   {
@@ -23,7 +24,7 @@ const projects = [
     // backendLink and demoLink are optional, so they can be omitted if not available
   },
   {
-    title: "Task Manager",
+    title: "Task Management System",
     description: "A web application that allows users to create, manage, and organize their tasks efficiently.", // Add a description
     imageUrl: "/image/task-manager.png", // Replace with a real image path
     technologies: ["React", "Node.js", "PostgreSQL"],
@@ -42,6 +43,12 @@ const toolIcons: { [key: string]: React.ReactNode } = {
   Java: <FontAwesomeIcon icon={faJava} className="text-2xl text-[#007396]" />,
   PHP: <FontAwesomeIcon icon={faPhp} className="text-2xl text-[#777BB4]" />,
   MySQL: <FontAwesomeIcon icon={faDatabase} className="text-2xl text-[#4479A1]" />,
+  PostgreSQL: (
+  <SiPostgresql className="text-2xl text-[#336791]" />
+),
+Render: (
+  <SiRender className="text-2xl text-[#46E3B7]" />
+),
   Vercel: <span className="font-bold text-2xl text-white">▲</span>,
 };
 
