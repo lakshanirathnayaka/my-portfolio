@@ -12,23 +12,24 @@ const projects = [
     technologies: ["React", "Node.js", "MongoDB","Vercel"],
     frontendLink: "https://github.com/lakshanirathnayaka/FindMyDocs_Frontend",
     backendLink: "https://github.com/lakshanirathnayaka/FindMyDocs_Backend",
-    demoLink: "https://find-my-docs-frontend.vercel.app/" // Example demo link
+    demoLink: "https://findmydocs.vercel.app/" // Example demo link
   },
   {
     title: "Exam Registration System",
-    description: "Description for project two.", // Add a description
+    description: "A web application that allows students to register for exams and manage their exam schedules.", // Add a description
     imageUrl: "/image/ERS.png", // Replace with a real image path
     technologies: ["PHP", "MySQL"],
-    frontendLink: "https://github.com/lakshanirathnayaka/ERS-Web_Technologies",
+    frontendLink: "https://github.com/lakshanirathnayaka/Exam-Registration-System",
     // backendLink and demoLink are optional, so they can be omitted if not available
   },
   {
-    title: "Project Three",
-    description: "Description for project three.", // Add a description
-    imageUrl: "/image/project3.png", // Replace with a real image path
-    technologies: ["Java", "MySQL"],
-    frontendLink: "https://github.com/lakshanirathnayaka/Project-Three-Repo",
-    // backendLink and demoLink are optional, so they can be omitted if not available
+    title: "Task Manager",
+    description: "A web application that allows users to create, manage, and organize their tasks efficiently.", // Add a description
+    imageUrl: "/image/task-manager.png", // Replace with a real image path
+    technologies: ["React", "Node.js", "PostgreSQL"],
+    frontendLink: "https://github.com/lakshanirathnayaka/taskmanager-frontend",
+    backendLink: "https://github.com/lakshanirathnayaka/TaskManager-backend",
+    demoLink: "https://taskmanager-frontend-y3vn.vercel.app/" // Example demo link
   },
 ];
 
